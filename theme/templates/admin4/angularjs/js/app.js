@@ -129,14 +129,14 @@ MetronicApp.controller('FooterController', ['$scope', function($scope) {
 MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
     // Redirect any unmatched url
-    $urlRouterProvider.otherwise("/dashboard.html");
+    $urlRouterProvider.otherwise("/dashboard.php");
 
     $stateProvider
 
         // Dashboard
         .state('dashboard', {
-            url: "/dashboard.html",
-            templateUrl: "views/dashboard.html",            
+            url: "/dashboard.php",
+            templateUrl: "views/dashboard.php",            
             data: {pageTitle: 'Dashboard', pageSubTitle: 'statistics & reports'},
             controller: "DashboardController",
             resolve: {
@@ -443,7 +443,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         // User Profile Dashboard
         .state("profile.dashboard", {
             url: "/dashboard",
-            templateUrl: "views/profile/dashboard.html",
+            templateUrl: "views/profile/dashboard.php",
             data: {pageTitle: 'User Profile', pageSubTitle: 'user profile dashboard sample'}
         })
 
