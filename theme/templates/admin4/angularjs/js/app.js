@@ -151,13 +151,29 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                             '../../../assets/global/plugins/morris/morris.min.js',
                             '../../../assets/global/plugins/morris/raphael-min.js',
                             '../../../assets/global/plugins/jquery.sparkline.min.js',
-
+                            
+                            '../../../assets/global/plugins/select2/select2.css',
+                            '../../../assets/global/plugins/select2/select2.min.js',
                             '../../../assets/admin/pages/scripts/index3.js',
                             '../../../assets/admin/pages/scripts/tasks.js',
 
                              'js/controllers/DashboardController.js'
                         ] 
                     });
+                }]
+            }
+        })
+.state('tambah', {
+            url: "/tambah.php",
+            templateUrl: "views/tambah.php",            
+            data: {pageTitle: 'Dashboard', pageSubTitle: 'statistics & reports'},
+            controller: "DashboardController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        name: 'MetronicApp',
+                        insertBefore: '#ng_load_plugins_before',
+});
                 }]
             }
         })
