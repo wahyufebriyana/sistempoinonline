@@ -8,7 +8,7 @@
           </div>
           <div class="modal-body">
             <div class="table-responsive">
-                <table class="table table-bordered table-hover dataTables dataTable-grid dataTable-example" id="pelanggaran">
+                <table class="table table-bordered table-hover dataTables dataTable-grid dataTable-example" id="sample_1">
                 <thead>
                     
                         <th></th>

@@ -31,7 +31,7 @@ $tahun = $row['tahun'];
 										<input name="tanggal" class="form-control">
 									</div>
 									<div class="col-md-5">
-										<select name="bulan" class="form-control">
+										<select name="bulan" class="form-control select2me">
 											<option value="januari">Januari</option>
 											<option value="februari">Februari</option>
 											<option value="maret">Maret</option>

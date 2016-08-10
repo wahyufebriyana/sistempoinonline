@@ -36,7 +36,7 @@
 					</div>
 				</div>
 				<div class="portlet-body">
-					
+					<?php include "_temp/siswabermasalah.php"; ?>
 					
 				</div>
 			</div>
@@ -71,5 +71,9 @@
         $('#myModal').modal('hide');
     });
 </script>
-
+<script type="text/javascript">
+	$(function(){
+		var oTable = $('#sample_1').DataTable();
+	});
+</script>
 <!-- BEGIN MAIN JS & CSS -->

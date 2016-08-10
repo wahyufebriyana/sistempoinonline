@@ -145,6 +145,11 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                         name: 'MetronicApp',
                         insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                         files: [
+                            '../../../assets/global/plugins/select2/select2.css',                             
+                            '../../../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css', 
+                            '../../../assets/global/plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css',
+                            '../../../assets/global/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css',
+                            'js/scripts/table-advanced.js',
                             '../../../assets/global/plugins/morris/morris.css',
                             '../../../assets/admin/pages/css/tasks.css',
                             
@@ -372,8 +377,8 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
 
         // Advanced Datatables
         .state('datatablesAdvanced', {
-            url: "/datatables/advanced.html",
-            templateUrl: "views/datatables/advanced.html",
+            url: "/datatables/advanced.php",
+            templateUrl: "views/datatables/advanced.php",
             data: {pageTitle: 'Advanced Datatables', pageSubTitle: 'advanced datatables samples'},
             controller: "GeneralPageController",
             resolve: {
@@ -397,6 +402,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                 }]
             }
         })
+        
 
         // Ajax Datetables
         .state('datatablesAjax', {
