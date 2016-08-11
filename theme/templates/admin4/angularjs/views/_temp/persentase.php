@@ -30,7 +30,7 @@
 				</div>
 				<div class="status">
 					<div class="status-title">
-						 <a href="#" data-toggle="modal" data-target="#pelanggaran">Lihat Detail</a>
+						 <a href="#/datatables/advanced.php">Lihat Detail</a>
 					</div>
 					<div class="status-number">
 						 <?php echo $per; ?>%
