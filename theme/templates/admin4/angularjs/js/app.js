@@ -379,7 +379,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         .state('datatablesAdvanced', {
             url: "/datatables/advanced.php",
             templateUrl: "views/datatables/advanced.php",
-            data: {pageTitle: 'Advanced Datatables', pageSubTitle: 'advanced datatables samples'},
+            data: {pageTitle: 'Daftar Siswa Bermasalah', pageSubTitle: 'DataTables'},
             controller: "GeneralPageController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
