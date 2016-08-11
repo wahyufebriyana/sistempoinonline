@@ -1,3 +1,8 @@
+<?php
+	include "../../../../../php/koneksi.php";
+	$query = mysql_query("SELECT * from remisi");
+	$mintaremisi = mysql_num_rows($query);
+?>
 <!-- BEGIN HEADER INNER -->
 <div class="page-header-inner">
 	<!-- BEGIN LOGO -->
@@ -65,12 +70,12 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 					<i class="icon-bell"></i>
 					<span class="badge badge-danger">
-					4 </span>
+					<?php echo $mintaremisi; ?> </span>
 					</a>
 					<ul class="dropdown-menu">
 						<li class="external">
-							<h3>You have <span class="bold">7 New</span> Messages</h3>
-							<a href="#/profile/dashboard">view all</a>
+							<h3>Ada <span class="bold"><?php echo $mintaremisi; ?> </span> permintaan remisi.</h3>
+							<a href="#/profile/dashboard">View All</a>
 						</li>
 						<li>
 							<ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
@@ -86,62 +91,6 @@
 									</span>
 									<span class="message">
 									Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-									<span class="photo">
-									<img src="../../../assets/admin/layout4/img/avatar3.jpg" class="img-circle" alt="">
-									</span>
-									<span class="subject">
-									<span class="from">
-									Richard Doe </span>
-									<span class="time">16 mins </span>
-									</span>
-									<span class="message">
-									Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-									<span class="photo">
-									<img src="../../../assets/admin/layout4/img/avatar1.jpg" class="img-circle" alt="">
-									</span>
-									<span class="subject">
-									<span class="from">
-									Bob Nilson </span>
-									<span class="time">2 hrs </span>
-									</span>
-									<span class="message">
-									Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-									<span class="photo">
-									<img src="../../../assets/admin/layout4/img/avatar2.jpg" class="img-circle" alt="">
-									</span>
-									<span class="subject">
-									<span class="from">
-									Lisa Wong </span>
-									<span class="time">40 mins </span>
-									</span>
-									<span class="message">
-									Vivamus sed auctor 40% nibh congue nibh... </span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-									<span class="photo">
-									<img src="../../../assets/admin/layout4/img/avatar3.jpg" class="img-circle" alt="">
-									</span>
-									<span class="subject">
-									<span class="from">
-									Richard Doe </span>
-									<span class="time">46 mins </span>
-									</span>
-									<span class="message">
-									Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
 									</a>
 								</li>
 							</ul>

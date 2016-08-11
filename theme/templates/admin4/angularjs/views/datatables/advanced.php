@@ -29,6 +29,7 @@
                         <th class="text-center">Kelas</th>
                         <th class="text-center">Poin</th>
                         <th class="text-center">Keterangan</th>
+                        <th class="text-center"></th>
                     
                 	</thead>
 					<tbody>
@@ -72,7 +73,8 @@
                                      <td class='text-center'>".$data['nis']."</td>
                                      <td class='text-center'>".$kelas." ".$data['kelas']."</td>
                                      <td class='text-center'>" .$data['poin']."</td>
-                                     <td>".$ket."</td></tr>";
+                                     <td>".$ket."</td>
+                                     <td class='text-center'><button type='button' class='btn btn-primary'>Remisi</button></td></tr>";
 
                             }
                         ?>

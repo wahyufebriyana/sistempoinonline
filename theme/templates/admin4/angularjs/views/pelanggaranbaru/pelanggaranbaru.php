@@ -80,7 +80,7 @@ $tahun = $row['tahun'];
 						<div class="row">
 							<div class="col-md-3"><label>Jenis Pelanggaran</label></div>
 							<div class="col-md-9">
-								<select name="jenis" id="jenis" class="demoInputBox form-control">
+								<select name="jenis" id="jenis" class="demoInputBox select2me form-control">
 	                                <option value="">Select Jenis</option>
 		                                <?php while ( $results = mysql_fetch_array($query)) { ?>
 	                                <option id="<?php echo $results['jenis']; ?>" value="<?php echo $results['jenis']; ?>"><?php echo $results['urai']; ?></option>
@@ -93,7 +93,7 @@ $tahun = $row['tahun'];
 						<div class="row">
 							<div class="col-md-3"><label>Pelanggaran</label></div>
 							<div class="col-md-9">
-								<select name="pelanggaran" id="pelanggaran-list" class="form-control demoInputBox">
+								<select name="pelanggaran" id="pelanggaran-list" class="form-control select2me demoInputBox">
 	                            	<option value="">Select Pelanggaran</option>
 	                        </select>
 							</div>
