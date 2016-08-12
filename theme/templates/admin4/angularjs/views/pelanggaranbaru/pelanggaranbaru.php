@@ -20,7 +20,7 @@ $tahun = $row['tahun'];
 			</div>
 		</div>
 		<div class="form-body">
-			<form action="#/tambah.php" method="POST">
+			<form action="" method="POST">
 				<div class="scroller" style="height: 300px;" data-always-visible="1" data-rail-visible="0">
 					<div class="form-group">
 						<div class="row">
@@ -80,7 +80,7 @@ $tahun = $row['tahun'];
 						<div class="row">
 							<div class="col-md-3"><label>Jenis Pelanggaran</label></div>
 							<div class="col-md-9">
-								<select name="jenis" id="jenis" class="demoInputBox select2me form-control">
+								<select name="jenis" id="jenis" class="demoInputBox form-control">
 	                                <option value="">Select Jenis</option>
 		                                <?php while ( $results = mysql_fetch_array($query)) { ?>
 	                                <option id="<?php echo $results['jenis']; ?>" value="<?php echo $results['jenis']; ?>"><?php echo $results['urai']; ?></option>
@@ -93,9 +93,9 @@ $tahun = $row['tahun'];
 						<div class="row">
 							<div class="col-md-3"><label>Pelanggaran</label></div>
 							<div class="col-md-9">
-								<select name="pelanggaran" id="pelanggaran-list" class="form-control select2me demoInputBox">
+								<select name="nomor" id="pelanggaran-list" class="form-control demoInputBox">
 	                            	<option value="">Select Pelanggaran</option>
-	                        </select>
+	                        	</select>
 							</div>
 						</div>
 					</div>
@@ -113,10 +113,24 @@ $tahun = $row['tahun'];
 		</div>
 	</div>
 	<!-- END REGIONAL STATS PORTLET-->
-
+<?php
+	$tanggal = $_POST['tanggal'];
+	$nis = $_POST['nis'];
+	$bulan = $_POST['bulan'];
+	$tahun = $_POST['tahun'];
+	$jenis = $_POST['jenis'];
+	$nomor = $_POST['nomor'];
+	$input = mysql_query("insert into pelanggaran values('$nis','$tanggal','$bulan','$tahun','$jenis','$nomor','')");
+	if ($input) {
+   		header("location:#/dashboard.php");
+	} else {
+    	echo "gagal";
+	}
+?>
 </div>
 <?php include "script.php"; ?>
 <script>
 	Index.init();    
 	Tasks.initDashboardWidget();
+
 </script>
