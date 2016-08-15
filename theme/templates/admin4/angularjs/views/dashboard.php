@@ -21,18 +21,8 @@
 				<div class="portlet-title">
 					<div class="caption caption-md">
 						<i class="icon-bar-chart font-green-haze hide"></i>
-						<span class="caption-subject font-green-haze bold uppercase">Sales Summary</span>
+						<span class="caption-subject font-green-haze bold uppercase">Selamat Datang</span>
 						<span class="caption-helper hide">weekly stats...</span>
-					</div>
-					<div class="actions">
-						<div class="btn-group btn-group-devided" data-toggle="buttons">
-							<label class="btn btn-transparent grey-salsa btn-circle btn-sm active">
-							<input type="radio" name="options" class="toggle" id="option1">Today</label>
-							<label class="btn btn-transparent grey-salsa btn-circle btn-sm">
-							<input type="radio" name="options" class="toggle" id="option2">Week</label>
-							<label class="btn btn-transparent grey-salsa btn-circle btn-sm">
-							<input type="radio" name="options" class="toggle" id="option2">Month</label>
-						</div>
 					</div>
 				</div>
 				<div class="portlet-body">

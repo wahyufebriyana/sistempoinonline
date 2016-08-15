@@ -20,7 +20,7 @@ $tahun = $row['tahun'];
 			</div>
 		</div>
 		<div class="form-body">
-			<form action="" method="POST">
+			<form action="tambah.php" method="POST">
 				<div class="scroller" style="height: 300px;" data-always-visible="1" data-rail-visible="0">
 					<div class="form-group">
 						<div class="row">
@@ -46,8 +46,8 @@ $tahun = $row['tahun'];
 											<option value="desember">Desember</option>
 										</select>
 									</div>
-									<div name="tahun" class="col-md-4">
-										<input class="form-control">
+									<div class="col-md-4">
+										<input name="tahun" class="form-control">
 									</div>
 								</div>
 							</div>
@@ -56,7 +56,10 @@ $tahun = $row['tahun'];
 					<div class="form-group">
 						<div class="row">
 							<div class="col-md-3"><label>Nama</label></div>
-							<div class="col-md-9">
+							<div class="col-md-9"  class="input-group"><div class="input-group">
+								<span class="input-group-addon">
+									<i class="fa fa-user"></i>
+								</span>
 								<select name="nis" class="form-control select2me" data-placeholder="Select...">
 	                                <option value=""></option>
 		                                <?php while ( $r = mysql_fetch_array($q)) { 
@@ -73,7 +76,7 @@ $tahun = $row['tahun'];
 	                                <option id="<?php echo $r['nis']; ?>" value="<?php echo $r['nis']; ?>"><?php echo $r['nama']; ?> (<?php echo $kelas; ?> <?php echo $r['kelas']; ?>)</option>
 		                                <?php } ?>
 	                            </select>
-							</div>
+							</div></div>
 						</div>
 					</div>
 					<div class="form-group">
@@ -93,7 +96,7 @@ $tahun = $row['tahun'];
 						<div class="row">
 							<div class="col-md-3"><label>Pelanggaran</label></div>
 							<div class="col-md-9">
-								<select name="nomor" id="pelanggaran-list" class="form-control demoInputBox">
+								<select name="nomor" id="nomor" class="form-control demoInputBox">
 	                            	<option value="">Select Pelanggaran</option>
 	                        	</select>
 							</div>
@@ -103,8 +106,8 @@ $tahun = $row['tahun'];
 						<div class="row">
 							<div class="col-md-3"></div>
 							<div class="col-md-9">
-								<button type="submit" class="btn btn-success">Simpan</button> 
-								<button type="reset" class="btn btn-danger">Batal</button>
+								<button type="submit" class="btn btn-success"><i class="fa fa-save"> Simpan</i></button> 
+								<button type="reset" class="btn btn-danger"><i class="fa fa-close"> Batal</i></button>
 							</div>
 						</div>
 					</div>
@@ -113,20 +116,7 @@ $tahun = $row['tahun'];
 		</div>
 	</div>
 	<!-- END REGIONAL STATS PORTLET-->
-<?php
-	$tanggal = $_POST['tanggal'];
-	$nis = $_POST['nis'];
-	$bulan = $_POST['bulan'];
-	$tahun = $_POST['tahun'];
-	$jenis = $_POST['jenis'];
-	$nomor = $_POST['nomor'];
-	$input = mysql_query("insert into pelanggaran values('$nis','$tanggal','$bulan','$tahun','$jenis','$nomor','')");
-	if ($input) {
-   		header("location:#/dashboard.php");
-	} else {
-    	echo "gagal";
-	}
-?>
+
 </div>
 <?php include "script.php"; ?>
 <script>

@@ -10,7 +10,7 @@
 
 <!-- BEGIN MAIN CONTENT -->
 <div class="row">
-	<div class="col-md-7">
+	<div class="col-md-12">
 		<!-- BEGIN EXAMPLE TABLE PORTLET-->
 		<div class="portlet box green-haze">
 			<div class="portlet-title">
@@ -29,16 +29,18 @@
                         <th class="text-center">Kelas</th>
                         <th class="text-center">Poin</th>
                         <th class="text-center">Keterangan</th>
-                        <!-- <th class="text-center"></th> -->
+                        <th class="text-center"></th>
                     
                 	</thead>
 					<tbody>
                     
                         <?php
                         	include "../../../../../../php/koneksi.php";
-                            $mysql = mysql_query("SELECT tahun from aplikasi");
+                            $tampil = "SELECT * FROM data WHERE poin!=0 and status='siswa' order by tahun desc";
+                            $tmpl = "SELECT tahun from aplikasi";
+                            $mysql = mysql_query($tmpl);
                             $row = mysql_fetch_array($mysql);
-                            $sql = mysql_query("SELECT * FROM data WHERE poin!=0 and status='siswa' ORDER BY nis desc");
+                            $sql = mysql_query($tampil);
                             $tahun = $row['tahun'];
 
                             $i = 0;
@@ -71,7 +73,8 @@
                                      <td class='text-center'>".$data['nis']."</td>
                                      <td class='text-center'>".$kelas." ".$data['kelas']."</td>
                                      <td class='text-center'>" .$data['poin']."</td>
-                                     <td>".$ket."</td></tr>";
+                                     <td>".$ket."</td>
+                                     <td class='text-center'><button type='button' class='btn btn-primary'>Remisi</button></td></tr>";
 
                             }
                         ?>
@@ -3952,11 +3955,8 @@
 			</div>
 		</div> -->
 		<!-- END EXAMPLE TABLE PORTLET-->
-
 	</div>
-	<?php include "a.php"; ?>
 </div>
-
 <!-- END MAIN CONTENT -->
 <!-- BEGIN MAIN JS -->
 <script>

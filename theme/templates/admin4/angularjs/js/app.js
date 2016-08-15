@@ -402,8 +402,34 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                 }]
             }
         })
-        
 
+        .state('datatables1Advanced', {
+            url: "/datatables/advanced1.php",
+            templateUrl: "views/datatables/advanced1.php",
+            data: {pageTitle: 'Daftar Siswa Bermasalah', pageSubTitle: 'DataTables'},
+            controller: "GeneralPageController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        name: 'MetronicApp',
+                        insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                        files: [
+                            '../../../assets/global/plugins/select2/select2.css',                             
+                            '../../../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css', 
+                            '../../../assets/global/plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css',
+                            '../../../assets/global/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css',
+
+                            '../../../assets/global/plugins/select2/select2.min.js',
+                            '../../../assets/global/plugins/datatables/all.min.js',
+                            'js/scripts/table-advanced.js',
+
+                            'js/controllers/GeneralPageController.js',
+                        ]
+                    });
+                }]
+            }
+        })
+        
         // Ajax Datetables
         .state('datatablesAjax', {
             url: "/datatables/ajax.html",
@@ -427,7 +453,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                             '../../../assets/global/scripts/datatable.js',
                             'js/scripts/table-ajax.js',
 
-                            'js/controllers/GeneralPageController.js'
+                            'js/controllers/GeneralPageController.js',
                         ]
                     });
                 }]

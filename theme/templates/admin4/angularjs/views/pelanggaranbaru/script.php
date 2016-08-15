@@ -21,7 +21,7 @@ $(document).ready(function(){
         	+'	</select>'
     });
     $("#A").click(function(event){
-        $("#pelanggaran-list").html(event.result);
+        $("#nomor").html(event.result);
     });  
 });
 </script>
@@ -40,7 +40,7 @@ $(document).ready(function(){
         	+'	</select>'
     });
     $("#B").click(function(event){
-        $("#pelanggaran-list").html(event.result);
+        $("#nomor").html(event.result);
     });  
 });
 </script>
@@ -68,7 +68,7 @@ $(document).ready(function(){
         	+'	</select>'
     });
     $("#C").click(function(event){
-        $("#pelanggaran-list").html(event.result);
+        $("#nomor").html(event.result);
     });  
 });
 </script>
@@ -82,7 +82,7 @@ $(document).ready(function(){
         	+'	</select>'
     });
     $("#D").click(function(event){
-        $("#pelanggaran-list").html(event.result);
+        $("#nomor").html(event.result);
     });  
 });
 </script>
@@ -97,7 +97,7 @@ $(document).ready(function(){
         	+'	</select>'
     });
     $("#E").click(function(event){
-        $("#pelanggaran-list").html(event.result);
+        $("#nomor").html(event.result);
     });  
 });
 </script>
@@ -111,7 +111,7 @@ $(document).ready(function(){
         	+'	</select>'
     });
     $("#F").click(function(event){
-        $("#pelanggaran-list").html(event.result);
+        $("#nomor").html(event.result);
     });  
 });
 </script>
@@ -125,7 +125,7 @@ $(document).ready(function(){
         	+'	</select>'
     });
     $("#G").click(function(event){
-        $("#pelanggaran-list").html(event.result);
+        $("#nomor").html(event.result);
     });  
 });
 </script>
@@ -142,7 +142,7 @@ $(document).ready(function(){
         	+'	</select>'
     });
     $("#H").click(function(event){
-        $("#pelanggaran-list").html(event.result);
+        $("#nomor").html(event.result);
     });  
 });
 </script>
@@ -156,7 +156,7 @@ $(document).ready(function(){
         	+'	</select>'
     });
     $("#I").click(function(event){
-        $("#pelanggaran-list").html(event.result);
+        $("#nomor").html(event.result);
     });  
 });
 </script>
@@ -170,7 +170,7 @@ $(document).ready(function(){
         	+'	</select>'
     });
     $("#J").click(function(event){
-        $("#pelanggaran-list").html(event.result);
+        $("#nomor").html(event.result);
     });  
 });
 </script>

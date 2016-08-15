@@ -19,7 +19,7 @@
 					<small>PELANGGARAN</small>
 				</div>
 				<div class="icon">
-					<i class="icon-pie-chart"></i>
+					<i class="fa fa-frown-o"></i>
 				</div>
 			</div>
 			<div class="progress-info">
@@ -57,7 +57,7 @@
 					<small>SURAT PERINGATAN I</small>
 				</div>
 				<div class="icon">
-					<i class="icon-basket"></i>
+					<i class="fa fa-thumbs-o-down"></i>
 				</div>
 			</div>
 			<div class="progress-info">
@@ -94,7 +94,7 @@
 					<small>SURAT PERINGATAN II</small>
 				</div>
 				<div class="icon">
-					<i class="icon-user"></i>
+					<i class="fa fa-bomb"></i>
 				</div>
 			</div>
 			<div class="progress-info">
@@ -131,7 +131,7 @@
 					<small>SURAT PERINGATAN III</small>
 				</div>
 				<div class="icon">
-					<i class="icon-like"></i>
+					<i class="fa fa-exclamation-triangle"></i>
 				</div>
 			</div>
 			<div class="progress-info">
