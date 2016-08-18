@@ -168,17 +168,37 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                 }]
             }
         })
-.state('tambah', {
-            url: "/tambah.php",
-            templateUrl: "views/tambah.php",            
-            data: {pageTitle: 'Dashboard', pageSubTitle: 'statistics & reports'},
+        .state('lapor', {
+            url: "/laporan.php",
+            templateUrl: "views/laporan.php",            
+            data: {pageTitle: 'Pelanggaran', pageSubTitle: 'siap lapor'},
             controller: "DashboardController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load({
                         name: 'MetronicApp',
                         insertBefore: '#ng_load_plugins_before',
-});
+                        files: [
+                            '../../../assets/global/plugins/select2/select2.css',                             
+                            '../../../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css', 
+                            '../../../assets/global/plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css',
+                            '../../../assets/global/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css',
+                            'js/scripts/table-advanced.js',
+                            '../../../assets/global/plugins/morris/morris.css',
+                            '../../../assets/admin/pages/css/tasks.css',
+                            
+                            '../../../assets/global/plugins/morris/morris.min.js',
+                            '../../../assets/global/plugins/morris/raphael-min.js',
+                            '../../../assets/global/plugins/jquery.sparkline.min.js',
+                            
+                            '../../../assets/global/plugins/select2/select2.css',
+                            '../../../assets/global/plugins/select2/select2.min.js',
+                            '../../../assets/admin/pages/scripts/index3.js',
+                            '../../../assets/admin/pages/scripts/tasks.js',
+
+                             'js/controllers/DashboardController.js'
+                        ] 
+                    });
                 }]
             }
         })
