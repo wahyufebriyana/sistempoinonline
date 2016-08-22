@@ -83,7 +83,7 @@ $tahun = $row['tahun'];
                         <div class="row">
                             <div class="col-md-3"><label>Remisi</label></div>
                             <div class="col-md-9">
-                                <select name="koderemisi" id="koderemisi" class="demoInputBox form-control">
+                                <select name="koderemisi" id="koderemisi" class="bs-select form-control">
                                     <option value="">Select Remisi</option>
                                         <?php while ( $results = mysql_fetch_array($query)) { ?>
                                     <option id="<?php echo $results['kode']; ?>" value="<?php echo $results['kode']; ?>"><?php echo $results['urai']; ?></option>

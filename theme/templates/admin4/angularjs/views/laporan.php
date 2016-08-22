@@ -33,7 +33,8 @@
 <!-- BEGIN MAIN JS & CSS -->
 
 <script>
-	Index.init();    
-	Tasks.initDashboardWidget();
+	// Index.init();    
+	// Tasks.initDashboardWidget();
+	TableAdvanced.init();
 </script>
 <!-- BEGIN MAIN JS & CSS -->

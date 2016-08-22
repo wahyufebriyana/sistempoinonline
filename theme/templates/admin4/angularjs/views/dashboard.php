@@ -1,4 +1,10 @@
-
+<?php
+	include "../../../../../php/koneksi.php";
+	$query = mysql_query("SELECT * from aplikasi");
+	$row = mysql_fetch_array($query);
+	$tahun = $row['tahun'];
+	$tahun2 = $tahun+1;
+?>
 <!-- BEGIN PAGE BREADCRUMB -->
 <ul class="page-breadcrumb breadcrumb hide">
 	<li>
@@ -21,7 +27,7 @@
 				<div class="portlet-title">
 					<div class="caption caption-md">
 						<i class="icon-bar-chart font-green-haze hide"></i>
-						<span class="caption-subject font-green-haze bold uppercase">Selamat Datang</span>
+						<span class="caption-subject font-green-haze bold uppercase">Grafik Pelanggaran Tahun <?php echo $tahun; echo "/"; echo $tahun2; ?></span>
 						<span class="caption-helper hide">weekly stats...</span>
 					</div>
 				</div>

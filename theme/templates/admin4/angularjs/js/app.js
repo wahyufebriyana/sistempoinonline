@@ -171,7 +171,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         .state('lapor', {
             url: "/laporan.php",
             templateUrl: "views/laporan.php",            
-            data: {pageTitle: 'Pelanggaran', pageSubTitle: 'siap lapor'},
+            data: {pageTitle: '', pageSubTitle: 'Pemberitahuan Orang Tua / Wali'},
             controller: "DashboardController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
@@ -190,7 +190,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                             '../../../assets/global/plugins/morris/morris.min.js',
                             '../../../assets/global/plugins/morris/raphael-min.js',
                             '../../../assets/global/plugins/jquery.sparkline.min.js',
-                            
+                            '../../../assets/global/plugins/datatables/all.min.js',
                             '../../../assets/global/plugins/select2/select2.css',
                             '../../../assets/global/plugins/select2/select2.min.js',
                             '../../../assets/admin/pages/scripts/index3.js',
@@ -411,7 +411,10 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                             '../../../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css', 
                             '../../../assets/global/plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css',
                             '../../../assets/global/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css',
-
+                            '../../../assets/admin/pages/scripts/components-dropdowns.js',
+                            '../../../assets/global/plugins/bootstrap-select/bootstrap-select.min.css',
+                            '../../../assets/global/plugins/bootstrap-select/bootstrap-select.min.js',
+                            '../../../assets/global/plugins/bootstrap-select/bootstrap-select.min.js',
                             '../../../assets/global/plugins/select2/select2.min.js',
                             '../../../assets/global/plugins/datatables/all.min.js',
                             'js/scripts/table-advanced.js',
@@ -483,7 +486,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         // User Profile
         .state("profile", {
             url: "/profile",
-            templateUrl: "views/profile/main.html",
+            templateUrl: "views/profile/main.php",
             data: {pageTitle: 'User Profile', pageSubTitle: 'user profile sample'},
             controller: "UserProfileController",
             resolve: {
