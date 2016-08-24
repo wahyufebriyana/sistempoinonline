@@ -38,15 +38,18 @@
 				</div>
 				<!-- END SIDEBAR BUTTONS -->
 				<!-- SIDEBAR MENU -->
+				<?php
+					$nis = $_GET['nis'];
+				?>
 				<div class="profile-usermenu">
 					<ul class="nav">
 						<li ng-class="{active: $state.includes('profile.dashboard')}">
-							<a ui-sref="profile.dashboard">
+							<a ui-sref="profile.dashboard?nis=<?php echo $nis; ?>">
 							<i class="icon-home"></i>
 							Overview </a>
 						</li>
 						<li ng-class="{active: $state.includes('profile.account')}">
-							<a ui-sref="profile.account">
+							<a ui-sref="profile.account?nis=<?php echo $nis; ?>">
 							<i class="icon-settings"></i>
 							Account Settings </a>
 						</li>

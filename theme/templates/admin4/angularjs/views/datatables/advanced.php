@@ -43,6 +43,7 @@
 
                             $i = 0;
                             while($data = mysql_fetch_array($sql)){
+                            	$nis = $data['nis'];
                                 $poin = $data['poin'];
                                 if ($poin <= 25) {
                                     $ket = '-';
@@ -67,8 +68,8 @@
 
                                 
                                 $i++;
-                                echo "<td>".$data['nama']."</td>
-                                     <td class='text-center'>".$data['nis']."</td>
+                                echo "<td><a href='../angularjs/#/profile/dashboard?nis=$nis'>".$data['nama']."</a></td>
+                                     <td class='text-center'>".$nis."</td>
                                      <td class='text-center'>".$kelas." ".$data['kelas']."</td>
                                      <td class='text-center'>" .$data['poin']."</td>
                                      <td>".$ket."</td></tr>";
