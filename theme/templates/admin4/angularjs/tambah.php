@@ -11,10 +11,11 @@
 	$data = mysql_fetch_array($query);
 	$tambahan = mysql_fetch_array($query2);
 	$a = $data['poin'];
+	$th_pel = $data['tahun'];
 	$b = $tambahan['poin'];
 	$new = $a+$b;
 	$poin = mysql_query("UPDATE data set poin='$new' where nis='$nis'");
-	$input = mysql_query("INSERT INTO pelanggaran VALUES('$nis','$tanggal','$bulan','$tahun','$jenis','$nomor','')");
+	$input = mysql_query("INSERT INTO pelanggaran VALUES('$nis','$th_pel','$tanggal','$bulan','$tahun','$jenis','$nomor','')");
 	if ($input && $poin) {
    		?>
    			<script type="text/javascript">

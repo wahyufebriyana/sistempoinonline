@@ -6,7 +6,7 @@ $row = mysql_fetch_array($tmpl);
 $tahun = $row['tahun'];
 
 ?>
-<div class="col-md-5 col-sm-6">
+<div class="col-md-5 col-sm-12 col-xs-12">
     <!-- BEGIN REGIONAL STATS PORTLET-->
     <div class="portlet light ">
         <div class="portlet-title">

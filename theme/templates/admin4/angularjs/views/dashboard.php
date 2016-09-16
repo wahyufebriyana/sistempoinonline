@@ -21,7 +21,7 @@
 		include "_temp/persentase.php";
 	?>
 	<div class="row">
-		<div class="col-md-6 col-sm-12">
+		<div class="col-md-6 col-sm-12 col-xs-12">
 			<!-- BEGIN PORTLET-->
 			<div class="portlet light ">
 				<div class="portlet-title">

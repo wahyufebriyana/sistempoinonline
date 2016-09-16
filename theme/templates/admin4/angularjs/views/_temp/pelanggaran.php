@@ -2,7 +2,7 @@
 	$query = mysql_query("SELECT * from pelanggaran order by id desc");
 ?>
 <div class="row">
-	<div class="col-md-12">
+	<div class="col-md-12 col-sm-12 col-xs-12">
 		<table class="table table-bordered table-striped table-hover dataTables" id="sample_1">
 			<thead>
 				<th hidden></th>
@@ -78,7 +78,7 @@ while ($row = mysql_fetch_array($queri)) {
           <div class="modal-body">
             <div class="portlet dark">
                 <div class="row">
-                	<div class="col-md-6">
+                	<div class="col-md-6 col-md-6 col-xs-6">
                 		<div class="portlet-title">
                 			<div class="caption caption-md">
 								<i class="fa fa-envelope-o"></i>
@@ -115,7 +115,7 @@ while ($row = mysql_fetch_array($queri)) {
 	                		</form>
                 		</div>
                 	</div>
-                	<div class="col-md-6">
+                	<div class="col-md-6 col-md-6 col-xs-6">
                 		<div class="portlet-title">
                 			<div class="caption caption-md">
 								<i class="fa fa-envelope-o"></i>

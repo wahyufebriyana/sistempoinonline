@@ -2,7 +2,7 @@
 	include "../../../../../php/koneksi.php";
 ?>
 <div class="row margin-top-10">
-	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 		<div class="dashboard-stat2">
 			<div class="display">
 				<div class="number">
@@ -40,7 +40,7 @@
 		</div>
 	</div>
 	
-	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 		<div class="dashboard-stat2">
 			<div class="display">
 				<div class="number">
@@ -54,7 +54,7 @@
 							echo mysql_num_rows($q);
 						?>
 					</h3>
-					<small>SURAT PERINGATAN I</small>
+					<small>PERINGATAN I</small>
 				</div>
 				<div class="icon">
 					<i class="fa fa-thumbs-o-down"></i>
@@ -77,7 +77,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 		<div class="dashboard-stat2">
 			<div class="display">
 				<div class="number">
@@ -91,7 +91,7 @@
 							echo mysql_num_rows($q);
 						?>
 					</h3>
-					<small>SURAT PERINGATAN II</small>
+					<small>PERINGATAN II</small>
 				</div>
 				<div class="icon">
 					<i class="fa fa-bomb"></i>
@@ -114,7 +114,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
 		<div class="dashboard-stat2">
 			<div class="display">
 				<div class="number">
@@ -128,7 +128,7 @@
 							echo mysql_num_rows($q);
 						?>
 					</h3>
-					<small>SURAT PERINGATAN III</small>
+					<small>PERINGATAN III</small>
 				</div>
 				<div class="icon">
 					<i class="fa fa-exclamation-triangle"></i>

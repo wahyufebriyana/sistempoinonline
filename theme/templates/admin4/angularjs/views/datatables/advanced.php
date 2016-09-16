@@ -10,7 +10,7 @@
 
 <!-- BEGIN MAIN CONTENT -->
 <div class="row">
-	<div class="col-md-7">
+	<div class="col-md-7 col-sm-12-col-xs-12">
 		<!-- BEGIN EXAMPLE TABLE PORTLET-->
 		<div class="portlet box green-haze">
 			<div class="portlet-title">
@@ -3962,5 +3962,10 @@
 <!-- BEGIN MAIN JS -->
 <script>
 	TableAdvanced.init();
+</script>
+<script type="text/javascript">
+	function profil(nis){
+		
+	} 
 </script>
 <!-- END MAIN JS
